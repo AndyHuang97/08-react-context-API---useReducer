@@ -1,4 +1,14 @@
-export default function Cart({ items, onUpdateItemQuantity }) {
+import { useContext } from "react";
+// import { use }from "react";
+
+import { CartContext } from "../store/shopping-cart-context.jsx";
+
+export default function Cart({ onUpdateItemQuantity }) {
+  // normally, you are not allowed to use react hooks in ifs and for loops
+  // but with the "use" hook you can, starting from react 19
+  // const cartCtx = useContext(CartContext);
+  const { items } = useContext(CartContext);
+
   const totalPrice = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0

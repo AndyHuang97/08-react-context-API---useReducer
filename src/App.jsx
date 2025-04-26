@@ -70,7 +70,7 @@ function App() {
 
   return (
     // CartContext.Provider for React versions < 19
-    <CartContext>
+    <CartContext value={{items:[]}}>
       <Header
         cart={shoppingCart}
         onUpdateCartItemQuantity={handleUpdateCartItemQuantity}
