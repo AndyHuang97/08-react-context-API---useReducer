@@ -15,9 +15,7 @@ export default function Product({ id, image, title, price, description }) {
           <p>{description}</p>
         </div>
         <p className="product-actions">
-          <button onClick={() => addItemToCart(id)}>
-            Add to Cart
-          </button>
+          <button onClick={() => addItemToCart(id)}>Add to Cart</button>
         </p>
       </div>
     </article>
